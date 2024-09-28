@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Admin Dashboard</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="header__upper-panel">
+                    <div class="header__search-bar">
+                        <form id="search-form">
+                            <input type="text" id="query" name="q" placeholder="Search">
+                            <button>Search</button>
+                        </form>
+                    </div>
+                    <div class="header__notifications">
+                        <ul>
+                            <li>Bell</li>
+                            <li>Avatar</li>
+                            <li>Morgan Oakley</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__actions-panel">
+                    <div class="header__greeting">
+                        <div class="header__greeting-avatar">Avatar</div>
+                        <div class="header__greeting-text">
+                            Hi there,
+                            <div class="header__greeting-name">
+                                Morgan Oakley (@morgan)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__actions">
+                        <button>New</button>
+                        <button>Upload</button>
+                        <button>Share</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="sidebar__title">
+                    <i></i>
+                    <h1>Dashboard</h1>
+                </div>
+                <ul class="sidebar__main-nav">
+                    <li><a href="#"><i></i> Home</a></li>
+                    <li><a href="#"><i></i> Profile</a></li>
+                    <li><a href="#"><i></i> Messages</a></li>
+                    <li><a href="#"><i></i> History</a></li>
+                    <li><a href="#"><i></i> Tasks</a></li>
+                    <li><a href="#"><i></i> Communities</a></li>
+                </ul>
+                <ul class="sidebar__utility-links">
+                    <li><a href="#"><i></i> Settings</a></li>
+                    <li><a href="#"><i></i> Support</a></li>
+                    <li><a href="#"><i></i> Privacy</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="content__projects">
+                    <h2 class="content__projects-heading">My Projects</h2>
+
+                    <div class="card content__project-card">
+                        <h3 class="content__project-card-title">Super Cool Project</h3>
+                        <p class="content__project-card-body">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Quibusdam aspernatur sequi deserunt distinctio? Laborum rem enim, ut repellat
+                            praesentium
+                            illum aut quasi aliquid omnis, fugit quibusdam magnam earum facere quam.</p>
+                        <div class="content__project-card-icons"></div>
+                    </div>
+                    <div class="card content__project-card">
+                        <h3 class="content__project-card-title">Less Cool Project</h3>
+                        <p class="content__project-card-body">Nostrum ea quae asperiores ut ipsam ratione
+                            aspernatur.
+                            Labore id quos mollitia maiores fugit similique ipsum! Similique, consequatur aspernatur
+                            tempore inventore voluptate ipsa repudiandae nihil quibusdam suscipit est doloremque
+                            non!
+                        </p>
+                        <div class="content__project-card-icons"></div>
+                    </div>
+                    <div class="card content__project-card">
+                        <h3 class="content__project-card-title">Impossible App</h3>
+                        <p class="content__project-card-body">Ipsa deserunt recusandae dolore praesentium cupiditate
+                            placeat obcaecati eveniet doloribus fugit explicabo, sit ducimus vero voluptatibus
+                            dignissimos laudantium perferendis quo necessitatibus optio totam accusamus id maiores
+                            omnis
+                            atque. Repellendus, modi.</p>
+                        <div class="content__project-card-icons"></div>
+                    </div>
+                    <div class="card content__project-card">
+                        <h3 class="content__project-card-title">Easy Peasy App</h3>
+                        <p class="content__project-card-body">Necessitatibus temporibus ex, doloremque sed id
+                            voluptates
+                            expedita, quia ullam dolores natus consectetur porro perspiciatis, minus corporis
+                            dignissimos nesciunt. Repellat totam delectus at minus temporibus nesciunt vero
+                            similique
+                            beatae quasi!</p>
+                        <div class="content__project-card-icons"></div>
+                    </div>
+                    <div class="card content__project-card">
+                        <h3 class="content__project-card-title">Ad Blocker</h3>
+                        <p class="content__project-card-body">Eum, sint? Autem blanditiis magnam tempora ipsam in
+                            asperiores, quisquam harum modi, molestiae nulla sequi eveniet quis, fuga quo dolor
+                            iusto
+                            eos! Doloribus, dolorum necessitatibus numquam autem quaerat labore laudantium.</p>
+                        <div class="content__project-card-icons"></div>
+                    </div>
+                    <div class="card content__project-card">
+                        <h3 class="content__project-card-title">Money Maker</h3>
+                        <p class="content__project-card-body">Illo, quam adipisci ut nam quia iure veritatis iste
+                            exercitationem facilis cupiditate libero suscipit tempora architecto veniam rerum
+                            possimus
+                            laboriosam hic, blanditiis est dolores odio. Ad voluptas quae dolore veritatis?</p>
+                        <div class="content__project-card-icons"></div>
+                    </div>
+                </div>
+                <div class="content__aside">
+                    <div class="content__announcements">
+                        <!-- NOTE. Need to declare text-overflow: ellipsis on body text -->
+                        <h2 class="content__announcements-heading">Announcements</h2>
+
+                        <div class="card content__announcements-card">
+                            <div class="content__announcements-item">
+                                <h3 class="content__announcement-title">Site Maintenance</h3>
+                                <p class="content__announcement-body">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Similique fuga voluptatum ab sunt aspernatur quos veritatis eaque, magnam
+                                    voluptatem nihil quod quibusdam accusamus facilis libero delectus eius provident,
+                                    non quas.</p>
+                            </div>
+                            <div class="content__announcements-item">
+                                <h3 class="content__announcement-title">Community Share Day</h3>
+                                <p class="content__announcement-body">Tempora accusantium quasi esse deserunt saepe
+                                    explicabo possimus in ratione. Et officiis illo fuga ipsa cum architecto minus id
+                                    ullam sequi dolorem aut eveniet vero voluptatem, sunt nam possimus quo.</p>
+                            </div>
+                            <div class="content__announcements-item">
+                                <h3 class="content__announcement-title">Updated Privacy Policy</h3>
+                                <p class="content__announcement-body">Veniam cupiditate aperiam saepe ratione et,
+                                    quibusdam doloremque qui tempora repellat cumque aut atque enim quam exercitationem
+                                    repellendus, sunt obcaecati molestias. Tempora animi placeat, quasi sit in itaque
+                                    quas quae.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__trending">
+                        <h2 class="content__trending-heading">Trending</h2>
+
+                        <div class="card content__trending-card">
+                            <div class="content__trending-item">
+                                <div class="content__trending-avatar"></div>
+                                <div class="content__trending-body">
+                                    <span class="content__trending-user">@tegan</span>
+                                    <span class="content__trending-title">World Peace Builder</span>
+                                </div>
+                            </div>
+                            <div class="content__trending-item">
+                                <div class="content__trending-avatar"></div>
+                                <div class="content__trending-body">
+                                    <span class="content__trending-user">@morgan</span>
+                                    <span class="content__trending-title">Super Cool Project</span>
+                                </div>
+                            </div>
+                            <div class="content__trending-item">
+                                <div class="content__trending-avatar"></div>
+                                <div class="content__trending-body">
+                                    <span class="content__trending-user">@kendall</span>
+                                    <span class="content__trending-title">Life Changing App</span>
+                                </div>
+                            </div>
+                            <div class="content__trending-item">
+                                <div class="content__trending-avatar"></div>
+                                <div class="content__trending-body">
+                                    <span class="content__trending-user">@alex</span>
+                                    <span class="content__trending-title">No Traffic Maker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
