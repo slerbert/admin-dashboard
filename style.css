@@ -1,0 +1,336 @@
+/* Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+:root {
+    /* Colors */
+
+    /* State Colors */
+
+    /* Typography */
+    --fs-small: calc(var(--fs-regular)/1.15);
+    --fs-regular: var(--s0);
+    --fs-large: var(--s1);
+    
+    /* Modular Spacing */
+    --ratio: 1.25;
+    --s-5: calc(var(--s-4) / var(--ratio));
+    --s-4: calc(var(--s-3) / var(--ratio));
+    --s-3: calc(var(--s-2) / var(--ratio));
+    --s-2: calc(var(--s-1) / var(--ratio));
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+}
+
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: var(--fs-regular);
+  font-family: Roboto, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: var(--fs-large);
+}
+
+h2 {
+  margin-top: var(--s1);
+  margin-bottom: var(--s0);
+  font-size: var(--fs-regular);
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: none;
+  font-size: var(--fs-regular);
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Layout Styles */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.header {
+    grid-column: 2 / 5;
+    background-color: salmon;
+    padding: var(--s-1) var(--s3);
+}
+
+.sidebar {
+  grid-row: 1 / 3;
+  background-color: skyblue;
+  padding: 1rem 1.5rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1.5rem;
+  background-color: ghostwhite;
+  padding: var(--s2) var(--s1);
+}
+
+.header__upper-panel {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.header__notifications > ul {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: var(--s3);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__actions-panel {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: var(--s1);
+}
+
+.header__search-bar {
+  height: 100%;
+}
+
+.header__search-bar > form {
+  background-color: #fff;
+  width: 85%;
+  height: 75%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__search-bar input {
+  all: unset;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+.header__search-bar button {
+  all: unset;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  width: 50px;
+  height: 100%;
+}
+
+.header__greeting {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--s0);
+}
+
+.header__greeting-avatar {
+  place-self: center;
+}
+
+.header__actions {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header__actions > * {
+  all: unset;
+  background-color: red;
+}
+
+.sidebar__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--s3) 0;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10%;
+  text-decoration: none;
+}
+
+.sidebar li {
+  margin: var(--s-1);
+}
+
+.content__aside {
+  max-width: 25ch;
+}
+
+.content__projects-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.content__project-card-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--s3);
+}
+
+.content__announcements-card > * + * {
+  padding-top: var(--s0);
+  padding-bottom: var(--s0);
+  border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+.content__announcements-item:first-child {
+  padding-bottom: var(--s0);
+}
+.content__announcements-item:last-child {
+  padding-top: var(--s0);
+}
+
+.content__announcement-body {
+  font-size: var(--fs-small);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+
+/* Component Styles */
+
+.card {
+  border-radius: 8px;
+  box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, .1);
+  background-color: white;
+  padding: var(--s2);
+}
+
+.nav-icon {
+  float: left;
+  /* need to figure out how to vertically center this piece of shit too */
+}
+
+.star-icon {
+  content: url(./assets/img/icons/star1.svg);
+}
+
+.visible-icon {
+  content: url(./assets/img/icons/visible1.svg);
+}
+
+.share-icon {
+  content: url(./assets/img/icons/share1.svg);
+}
+
+/* State Styles */
+
+/* Utility */
+
+.avatar-size-s {
+  width: 50px;
+}
+
+.avatar-size-l {
+  width: 75px;
+}
