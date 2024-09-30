@@ -81,9 +81,14 @@ textarea:not([rows]) {
     --clr-grey-400: hsl(0, 0%, 60%);
     --clr-grey-500: hsl(0, 0%, 50%);
     -clr-grey-600: hsl(0, 0%, 40%);
+
+    --clr-purple:  #A100FF;
+    --clr-blue:  #71C4FF;
+    --clr-dark-blue: #1C274C;
     /* State Colors */
 
     /* Typography */
+    --fs-xsmall: var(--s-1);
     --fs-small: calc(var(--fs-regular)/1.15);
     --fs-regular: var(--s0);
     --fs-large: var(--s1);
@@ -113,7 +118,8 @@ textarea:not([rows]) {
 body {
   font-size: var(--fs-regular);
   font-family: Roboto, sans-serif;
-  color: #444;
+  /* color: #444; */
+  color: var(--clr-dark-blue);
 
   margin: 0;
   height: 100%;
@@ -171,7 +177,7 @@ p {
 }
 
 .glass {
-  background: rgba( 255, 255, 255, 0.25 );
+  background: rgba( 255, 255, 255, 0.2 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   /* backdrop-filter: blur( 8px ); */
   backdrop-filter: blur(16px) saturate(120%);
@@ -185,7 +191,8 @@ p {
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    margin: var(--s-1);
+    /* margin: var(--s-1); */
+    margin: 1.5%;
     border-radius: 50px;
     gap: var(--s1);
 }
@@ -208,6 +215,7 @@ p {
   grid-column: 2 / 5;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  justify-items: center;
   gap: 1.5rem;
   padding: var(--s2) var(--s1);
   border-radius: 50px 0 50px 0;
@@ -221,12 +229,14 @@ p {
 
 .header__notifications > ul {
     display: grid;
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: repeat(3, auto);
     align-items: center;
-    gap: var(--s3);
+    justify-items: center;
+    gap: var(--s2);
     list-style: none;
     margin: 0;
     padding: 0;
+    font-weight: 600;
 }
 
 .header__actions-panel {
@@ -237,6 +247,8 @@ p {
 
 .header__search-bar {
   height: 100%;
+  display: grid;
+  align-items: center;
 }
 
 .header__search-bar > form {
@@ -270,6 +282,12 @@ p {
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: var(--s0);
+  font-size: var(--fs-xsmall);
+  font-weight: 500;
+}
+
+.header__greeting-name {
+  font-size: var(--s1);
 }
 
 .header__greeting-avatar {
@@ -281,12 +299,13 @@ p {
   grid-template-columns: repeat(3, auto);
   align-items: center;
   justify-content: space-around;
+  gap: var(--s0);
 }
 
 .sidebar__title {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1em;
 }
 
 .sidebar ul {
@@ -299,8 +318,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: 10%;
+  gap: 1em;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .sidebar li {
@@ -308,12 +328,13 @@ p {
 }
 
 .content__aside {
-  max-width: 25ch;
+  max-width: 30ch;
 }
 
 .content__projects-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 1fr 1fr auto;
   gap: 1.5rem;
 }
 
@@ -321,6 +342,7 @@ p {
   display: flex;
   justify-content: flex-end;
   gap: var(--s3);
+  margin-top: 1rem;
 }
 
 .content__announcements-card > * + * {
@@ -334,6 +356,10 @@ p {
 }
 .content__announcements-item:last-child {
   padding-top: var(--s0);
+}
+
+.content__announcements-item a {
+  text-decoration: none;
 }
 
 .content__announcement-body {
@@ -360,22 +386,25 @@ p {
 }
 
 .star-icon {
-  content: url(./assets/img/icons/star1.svg);
+  content: url(./assets/img/icons/star.svg);
 }
 
 .visible-icon {
-  content: url(./assets/img/icons/visible1.svg);
+  content: url(./assets/img/icons/edit.svg);
 }
 
 .share-icon {
-  content: url(./assets/img/icons/share1.svg);
+  content: url(./assets/img/icons/share2.svg);
 }
 
 .button {
   all: unset;
   text-align: center;
   font-weight: 700;
-  border: 1px solid hsla(0, 0%, 100%, 50%);
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  outline: 1px solid hsla(0, 0%, 100%, 50%);
+
   border-radius: 15px;
   color: white;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
@@ -394,7 +423,7 @@ p {
 
 .button:hover {
   transform: translateY(-1px);
-  border: 1px solid rgb(255, 255, 255);
+  box-shadow: -2px -2px 10px -2px rgba(255, 255, 255, .9), 2px 2px 10px -2px rgba(0, 0, 0, .4);
 }
 
 /* Utility */
